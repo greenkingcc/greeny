@@ -18,7 +18,7 @@ export default function Info() {
               distinctio at, asperiores, est ad quibusdam ullam?
             </p>
             <Link to="/objekte/">
-              <button className="btn text-uppercase btn-yellow">
+              <button className="btn text-uppercase btn-yellow btn-yellow-white-bg">
                 Jetzt stöbern!
               </button>
             </Link>

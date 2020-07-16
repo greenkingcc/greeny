@@ -48,9 +48,18 @@ kontakt-background {
 
 }
 
-.btn-yellow {
+.btn-yellow,
+.btn-yellow-white-bg {
   color: var(--mainYellow);
   border-color: var(--mainYellow);
+  background: var(--mainGrey);
+
+}
+
+.btn-yellow-white-bg {
+
+  background: var(--mainWhite);
+
 }
 
 .btn-yellow:hover {
@@ -63,7 +72,10 @@ kontakt-background {
 
 }
 
-
+.menu,
+.contact {
+  background: var(--mainGrey);
+}
 
 /* ____ OLD GATSBY CSS ____ */
 
