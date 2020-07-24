@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
-import Logo from "../../images/logo2.png"
-import { IoIosMail } from "react-icons/io"
+import React, { Component } from "react";
+import { Link } from "gatsby";
+import Logo from "../../images/logo2.png";
+import { IoIosMail } from "react-icons/io";
 
 export default class Navbar extends Component {
   state = {
@@ -15,7 +15,7 @@ export default class Navbar extends Component {
       },
       {
         id: 2,
-        path: "/objekte",
+        path: "/produkte",
         text: "Objekte",
       },
       {
@@ -39,20 +39,21 @@ export default class Navbar extends Component {
         text: "Service",
       },
     ],
-  }
+  };
   navbarHandler = () => {
     this.state.navbarOpen
       ? this.setState({ navbarOpen: false, css: "collapse navbar-collapse" })
       : this.setState({
           navbarOpen: true,
           css: "collapse navbar-collapse show",
-        })
-  }
+        });
+  };
   render() {
     return (
       <nav className="navbar navbar-expand-sm bg-light navbar-light">
         <Link to="/" className="navbar-brand">
-          <img src={Logo} alt="Logogattinator" />
+          <img className="logo" src={Logo} alt="Logogattinator" />
+          <h6 className="subtitle">Classic Interior</h6>
         </Link>
         <button
           className="navbar-toggler"
@@ -70,7 +71,7 @@ export default class Navbar extends Component {
                     {link.text}
                   </Link>
                 </li>
-              )
+              );
             })}
             <li className="nav-item ml-sm-5">
               <IoIosMail className="mail-icon" />
@@ -78,6 +79,6 @@ export default class Navbar extends Component {
           </ul>
         </div>
       </nav>
-    )
+    );
   }
 }

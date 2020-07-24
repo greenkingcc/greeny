@@ -1,7 +1,7 @@
-import React from "react"
-import Product from "./Product"
-import Title from "../Globals/Title"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import Product from "./Product";
+import Title from "../Globals/Title";
+import { StaticQuery, graphql } from "gatsby";
 
 const getProducts = graphql`
   {
@@ -9,6 +9,7 @@ const getProducts = graphql`
       edges {
         node {
           title
+          slug
           price
           image {
             fluid(maxHeight: 426) {
@@ -20,7 +21,7 @@ const getProducts = graphql`
       }
     }
   }
-`
+`;
 
 export default function Products() {
   return (
@@ -33,13 +34,13 @@ export default function Products() {
               <Title title="Unsere Auswahl" />
               <div className="row">
                 {data.products.edges.map(({ node: product }) => {
-                  return <Product key={product.id} product={product} />
+                  return <Product key={product.id} product={product} />;
                 })}
               </div>
             </div>
           </section>
-        )
+        );
       }}
     />
-  )
+  );
 }
