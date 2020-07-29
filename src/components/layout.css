@@ -115,7 +115,7 @@ kontakt-background {
 }
 
 .navbar-nav li a:hover,
-.navbar-nav > .active a {
+.navbar-nav>.active a {
   color: #fff !important;
 
   background-color: var(--mainYellow) !important;
@@ -137,8 +137,12 @@ kontakt-background {
   }
 }
 
-.fade-in {
-  animation: bganimation 4s initial 0s linear;
+footer {
+  clear: both;
+  position: relative;
+  height: 60px;
+  margin-top: -1px;
+
 }
 
 /* ____ OLD GATSBY CSS ____ */

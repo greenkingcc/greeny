@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/layout";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 // run template query
 export const query = graphql`
@@ -62,6 +63,22 @@ const BagTemplate = ({ data: { item } }) => {
         <main>
           <div className="descriptiontxt">
             {documentToReactComponents(item.description.json, options)}
+            <h6 className="price">{item.price}€</h6>
+            <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize buybtn">
+              <a
+                href={
+                  `mailto:info@gattinator.de?subject=Interesse%20an:` +
+                  item.title +
+                  `&body=Hallo%20Gattinator,%0D%0DIch%20interessiere%20mich%20fuer:%0Dhttps://gattinator-shop.netlify.app/produkte/` +
+                  item.slug +
+                  `%0Dzu%20einem%20Preis%20von%20` +
+                  item.price +
+                  `%20Euro`
+                }
+              >
+                Kaufen{" "}
+              </a>
+            </button>
           </div>
         </main>
       </div>

@@ -21,13 +21,6 @@ const getProducts = graphql`
             }
           }
         }
-        next {
-          image {
-            fluid {
-              src
-            }
-          }
-        }
       }
     }
   }

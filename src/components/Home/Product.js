@@ -11,24 +11,13 @@ export default function Product({ product }) {
         <div className="card-body text-center">
           <h6>{product.title}</h6>
           <h6 className="price">{product.price}€</h6>
-          <div class="container-btn">
-            <div class="btn-holder">
+          <div className="container-btn">
+            <div className="btn-holder">
               <AniLink
-                cover
+                fade
                 key={product.slug}
                 to={`/produkte/${product.slug}`}
-                direction="left"
-                duration={1}
-                bg={
-                  "url(http:" +
-                  product.image.fluid.src +
-                  ")" +
-                  " center / cover" +
-                  " no-repeat" +
-                  " padding-box" +
-                  " content-box" +
-                  " white"
-                }
+                duration={0.6}
               >
                 <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize buybtn">
                   Kaufen
