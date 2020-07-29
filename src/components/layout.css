@@ -29,7 +29,6 @@ h6 {
 
 .price {
   color: var(--mainYellow);
-
 }
 
 .text-yellow {
@@ -55,7 +54,6 @@ kontakt-background {
 
 .kontakt-background {
   min-height: 50vh;
-
 }
 
 .btn-yellow,
@@ -63,13 +61,11 @@ kontakt-background {
   color: var(--mainYellow);
   border-color: var(--mainYellow);
   background: var(--mainGrey);
-
+  padding: 10px 25px;
 }
 
 .btn-yellow-white-bg {
-
   background: var(--mainWhite);
-
 }
 
 .btn-yellow:hover {
@@ -79,15 +75,12 @@ kontakt-background {
 
 .footer {
   background: var(--mainBrown);
-
 }
 
 .menu,
 .contact {
   background: var(--mainGrey);
 }
-
-
 
 .product-title {
   min-height: 10vh;
@@ -102,6 +95,50 @@ kontakt-background {
 .logo {
   padding: 1em;
   height: 70px;
+}
+
+.container-btn {
+  justify-content: space-between;
+  flex-direction: column;
+  /* height: 100vh; */
+  display: flex;
+  padding: 10px;
+}
+
+.container-btn .btn-holder {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.container-btn .btn-holder button {
+  /* background: blue; */
+}
+
+.navbar-nav li a:hover,
+.navbar-nav > .active a {
+  color: #fff !important;
+
+  background-color: var(--mainYellow) !important;
+  background-image: none !important;
+}
+
+.descriptiontxt {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+@keyframes bganimation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: bganimation 4s initial 0s linear;
 }
 
 /* ____ OLD GATSBY CSS ____ */

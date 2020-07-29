@@ -18,8 +18,9 @@ export const query = graphql`
       }
 
       image {
-        fluid {
+        fluid(maxHeight: 426) {
           src
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
       detailimages {
@@ -33,8 +34,9 @@ export const query = graphql`
 `;
 
 const StyledImage = styled(Img)`
-  width: 30rem;
-  height: 30rem;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 const BagTemplate = ({ data: { item } }) => {
@@ -44,20 +46,25 @@ const BagTemplate = ({ data: { item } }) => {
 
   return (
     <Layout>
-      <br />
       <h2 class="product-title">{item.title}</h2>
-      {/* <div>{item.shortDescription}</div> */}
-      <StyledImage
-        fluid={item.image.fluid}
-        imgStyle={{
-          display: "block",
-          marginLeft: "auto",
-          marginRight: "auto",
-          width: "100%",
-        }}
-      />
-      {/* render the rich text format description */}
-      <main>{documentToReactComponents(item.description.json, options)}</main>
+      <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
+        {/* <div>{item.shortDescription}</div> */}
+
+        <StyledImage
+          fluid={item.image.fluid}
+          imgStyle={{
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        />
+        {/* render the rich text format description */}
+        <main>
+          <div className="descriptiontxt">
+            {documentToReactComponents(item.description.json, options)}
+          </div>
+        </main>
+      </div>
     </Layout>
   );
 };

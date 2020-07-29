@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "gatsby";
 import Logo from "../../images/logo2.png";
 import { IoIosMail } from "react-icons/io";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export default class Navbar extends Component {
   state = {
@@ -11,7 +12,7 @@ export default class Navbar extends Component {
       {
         id: 1,
         path: "/",
-        text: "Über Uns",
+        text: "Showroom",
       },
       {
         id: 2,
@@ -58,7 +59,7 @@ export default class Navbar extends Component {
         <button
           className="navbar-toggler"
           type="button"
-          onClick={this.bavbarHandler}
+          onClick={this.navbarHandler}
         >
           <span className="navbar-toggler-icon" />
         </button>
@@ -67,9 +68,16 @@ export default class Navbar extends Component {
             {this.state.links.map(link => {
               return (
                 <li key={link.id} className="nav-item">
-                  <Link to={link.path} className="nav-link text-capitalize">
+                  <AniLink
+                    paintDrip
+                    to={link.path}
+                    duration={0.5}
+                    hex="#ff9e09"
+                    className="nav-link text-capitalize"
+                    activeStyle={{ fontWeight: "bold" }}
+                  >
                     {link.text}
-                  </Link>
+                  </AniLink>
                 </li>
               );
             })}
