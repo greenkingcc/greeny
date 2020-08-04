@@ -1,5 +1,5 @@
-import React from "react"
-import Title from "../Globals/Title"
+import React from "react";
+import Title from "../Globals/Title";
 
 export default function Contact() {
   return (
@@ -7,7 +7,10 @@ export default function Contact() {
       <Title title="Jetzt kontaktieren" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
-          <form>
+          <form
+            action="https://formspree.io/john.lester.kortmann@gmail.com"
+            method="POST"
+          >
             {/* name */}
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -21,7 +24,7 @@ export default function Contact() {
             </div>
             {/* email */}
             <div className="form-group">
-              <label htmlFor="name">Email</label>
+              <label htmlFor="name">E-Mail</label>
               <input
                 type="text"
                 className="form-control"
@@ -41,9 +44,16 @@ export default function Contact() {
                 placeholder="Ihre Anfrage"
               ></textarea>
             </div>
+            {/* submit */}
+            <button
+              type="submit"
+              className="btn btn-yellow btn-block text-capitalize mt-5"
+            >
+              Abschick2en
+            </button>
           </form>
         </div>
       </div>
     </section>
-  )
+  );
 }

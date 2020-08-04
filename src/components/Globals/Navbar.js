@@ -51,42 +51,61 @@ export default class Navbar extends Component {
   };
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-light navbar-light">
-        <Link to="/" className="navbar-brand">
-          <img className="logo" src={Logo} alt="Logogattinator" />
-          <h6 className="subtitle">Classic Interior</h6>
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={this.navbarHandler}
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className={this.state.css}>
-          <ul className="navbar-nav mx-auto">
-            {this.state.links.map(link => {
-              return (
-                <li key={link.id} className="nav-item">
-                  <AniLink
-                    paintDrip
-                    to={link.path}
-                    duration={0.5}
-                    hex="#ff9e09"
-                    className="nav-link text-capitalize"
-                    activeStyle={{ fontWeight: "bold" }}
-                  >
-                    {link.text}
-                  </AniLink>
-                </li>
-              );
-            })}
-            <li className="nav-item ml-sm-5">
-              <IoIosMail className="mail-icon" />
-            </li>
-          </ul>
+      <>
+        <div className="navbar-header">
+          <AniLink
+            cover
+            to="/"
+            direction="left"
+            duration={3}
+            bg="
+    url(https://source.unsplash.com/random)
+    center / cover   /* position / size */
+    no-repeat        /* repeat */
+    fixed            /* attachment */
+    padding-box      /* origin */
+    content-box      /* clip */
+    white            /* color */
+  "
+            className="navbar-brand"
+          >
+            <img className="logo" src={Logo} alt="Logogattinator" />
+            <h6 className="subtitle">Classic Interior</h6>
+          </AniLink>
         </div>
-      </nav>
+        <nav className="navbar navbar-expand-sm bg-light navbar-light">
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={this.navbarHandler}
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className={this.state.css}>
+            <ul className="navbar-nav mr-auto">
+              {this.state.links.map(link => {
+                return (
+                  <li key={link.id} className="nav-item ">
+                    <AniLink
+                      paintDrip
+                      to={link.path}
+                      duration={0.5}
+                      hex="#ff9e09"
+                      className="nav-link text-capitalize"
+                      activeStyle={{ fontWeight: "bold" }}
+                    >
+                      {link.text}
+                    </AniLink>
+                  </li>
+                );
+              })}
+              <li className="nav-item ml-sm-5">
+                {/* <IoIosMail className="mail-icon" /> */}
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </>
     );
   }
 }

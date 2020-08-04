@@ -38,7 +38,7 @@ export default function Products() {
 
             <section className="py-5">
               <div className="container">
-                <Title title="Unser Showroom" />
+                <Title title="Unsere Objekte" />
                 <div className="row">
                   {data.products.edges.map(({ node: product }) => {
                     return <Product key={product.id} product={product} />;
@@ -47,7 +47,7 @@ export default function Products() {
               </div>
             </section>
 
-            <Info />
+            {/* <Info /> */}
           </Layout>
         );
       }}

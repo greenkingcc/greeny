@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { FaCouch } from "react-icons/fa";
+
 import BackgroundSection from "../components/Globals/BackgroundSection";
 import Info from "../components/Home/Info";
 import Menu from "../components/Home/Menu";
@@ -10,19 +10,46 @@ import Products from "../components/Home/Products";
 import Contact from "../components/Home/Contact";
 import TransitionLink from "gatsby-plugin-transition-link";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-
+import Title from "../components/Globals/Title";
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Products />
 
-    <h1>Gattinator</h1>
+    <Title title="Über Uns" />
+    <section className="py-5">
+      <div className="container">
+        <div className="row">
+          <div className="col-10 col-sm-8 mx-auto text-center">
+            <p className="lead text-muted mb-5">
+              Suchen Sie ein ganz bestimmtes Objekt? Dann könnten unsere
+              Kunstobjekte auf
+              <AniLink paintDrip to="/produkte">
+                {" "}
+                Gattinator.de{" "}
+              </AniLink>
+              mit Sicherheit hilfreich für Sie sein. Schreiben Sie uns doch
+              unverbindlich eine Nachricht, gerne mit
+              Vergleichsbildern/Vergleichsangebot, sofern vorhanden.
+              <br /> Wir nehmen Sie bzw. Ihr Wunschobjekt auf unsere Liste und
+              würden Sie bei einem Fund unsererseits umgehend kontaktieren. Auch
+              für Restaurationen Ihres Objektes können Sie uns gerne
+              kontaktieren. Nutzen Sie dazu einfach unser Kontaktformular. Je
+              nach Zeit und Aufwand können wir Ihnen auch per Ratschlag zur
+              Seite stehen um Ihr Objekt zu restaurieren.
+            </p>
+            <Link to="/produkte/">
+              <button className="btn text-uppercase btn-yellow btn-yellow-white-bg">
+                Jetzt stöbern!
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <p className="main-text">
-      Willkommen auf der{" "}
-      <AniLink paintDrip to="/produkte">
-        Gattinator.de
-      </AniLink>{" "}
-      Webseite. <FaCouch /> <br />
+      <br />
       <br />
       <AniLink
         cover
@@ -38,19 +65,8 @@ const IndexPage = ({ data }) => (
     content-box      /* clip */
     white            /* color */
   "
-      >
-        Go home with a random unsplash background
-      </AniLink>
+      ></AniLink>
       <br />
-      Suchen Sie ein ganz bestimmtes Objekt? Dann könnten wir auf auf
-      Gattinator.de mit Sicherheit hilfreich für Sie sein. Schreiben Sie uns
-      doch unverbindlich eine Nachricht, gerne mit
-      Vergleichsbildern/Vergleichsangebot, sofern vorhanden. Wir nehmen Sie bzw.
-      Ihr Wunschobjekt auf unsere Liste und würden Sie bei einem Fund
-      unsererseits umgehend kontaktieren. Auch für Restaurationen Ihres Objektes
-      können Sie uns gerne kontaktieren. Nutzen Sie dazu einfach unser
-      Kontaktformular. Je nach Zeit und Aufwand können wir Ihnen auch per
-      Ratschlag zur Seite stehen um Ihr Objekt zu restaurieren.
     </p>
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
