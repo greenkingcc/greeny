@@ -1,41 +1,41 @@
-import React, { Component } from "react"
-import Title from "../Globals/Title"
-import Img from "gatsby-image"
+import React, { Component } from "react";
+import Title from "../Globals/Title";
+import Img from "gatsby-image";
 
 const getCategories = items => {
   let tempItems = items.map(items => {
-    return items.node.category
-  })
-  let tempCategories = new Set(tempItems)
-  let categories = Array.from(tempCategories)
-  categories = ["alles", ...categories]
-  return categories
-}
+    return items.node.category;
+  });
+  let tempCategories = new Set(tempItems);
+  let categories = Array.from(tempCategories);
+  categories = ["alles", ...categories];
+  return categories;
+};
 
 export default class Menu extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     // console.log(props.items) to print props aller edges in chrome dev console ->edges->node->items
     this.state = {
       items: props.items.edges,
       furnitureItems: props.items.edges,
       categories: getCategories(props.items.edges),
-    }
+    };
   }
   handleItems = category => {
     // console.log(category)
-    let tempItems = [...this.state.items]
+    let tempItems = [...this.state.items];
     if (category === "alles") {
       this.setState(() => {
-        return { furnitureItems: tempItems }
-      })
+        return { furnitureItems: tempItems };
+      });
     } else {
-      let items = tempItems.filter(({ node }) => node.category === category)
+      let items = tempItems.filter(({ node }) => node.category === category);
       this.setState(() => {
-        return { furnitureItems: items }
-      })
+        return { furnitureItems: items };
+      });
     }
-  }
+  };
   render() {
     // console.log(this.state.categories) console logs my categories
 
@@ -43,9 +43,9 @@ export default class Menu extends Component {
       return (
         <section className="menu py-5">
           <div className="container">
-            <Title title="Showroom" />
+            <Title title="Archiv" />
             <div className="row">
-              <h1>Derzeit im Showroom:</h1>
+              <h1>Unser Archiv:</h1>
               {/* categories */}
               <div className="row mb-5">
                 <div className="col-10 mx-auto text-center">
@@ -56,12 +56,12 @@ export default class Menu extends Component {
                         key={index}
                         className="btn btn-yellow text-capitalize m-3"
                         onClick={() => {
-                          this.handleItems(category)
+                          this.handleItems(category);
                         }}
                       >
                         {category}
                       </button>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -91,13 +91,13 @@ export default class Menu extends Component {
                         </p>
                       </div>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
           </div>
         </section>
-      )
+      );
     } else {
       return (
         <section className="menu py-5">
@@ -110,7 +110,7 @@ export default class Menu extends Component {
             </div>
           </div>
         </section>
-      )
+      );
     }
   }
 }

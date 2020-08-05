@@ -14,8 +14,9 @@ import Title from "../components/Globals/Title";
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
+    {/* RANDOM PRODUKTE  */}
     <Products />
-
+    {/* TITLE BAR */}
     <Title title="Über Uns" />
     <section className="py-5">
       <div className="container">
@@ -24,7 +25,7 @@ const IndexPage = ({ data }) => (
             <p className="lead text-muted mb-5">
               Suchen Sie ein ganz bestimmtes Objekt? Dann könnten unsere
               Kunstobjekte auf
-              <AniLink paintDrip to="/produkte">
+              <AniLink paintDrip to="/produkte" className="main-link">
                 {" "}
                 Gattinator.de{" "}
               </AniLink>
@@ -73,7 +74,7 @@ const IndexPage = ({ data }) => (
       title="Gattinator.de"
       styleClass="default-background"
     />
-    <Info />
+    {/* <Info /> */}
     <Menu items={data.menu} />
     <Contact />
   </Layout>
@@ -81,7 +82,11 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpeg" }) {
+    img: file(
+      relativePath: {
+        eq: "armchair-furniture-carpet-home-decor-background-beautiful-composition-decoration.jpg"
+      }
+    ) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

@@ -53,7 +53,7 @@ const KontaktPage = ({ data }) => (
               </li>
             </ul>
             <Link to="/produkte/">
-              <button className="btn text-uppercase btn-yellow btn-yellow-white-bg">
+              <button className="btn btn-yellow btn-block text-capitalize mt-5">
                 Jetzt stöbern!
               </button>
             </Link>

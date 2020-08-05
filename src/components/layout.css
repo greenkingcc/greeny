@@ -116,7 +116,7 @@ kontakt-background {
 }
 
 .navbar-nav li a:hover,
-.navbar-nav > .active a {
+.navbar-nav>.active a {
   color: #fff !important;
   background-color: var(--mainYellow) !important;
   background-image: none !important;
@@ -134,6 +134,18 @@ kontakt-background {
 
 .footer-link {
   color: var(--mainWhite);
+}
+
+.footer-link:hover {
+  color: var(--mainGrey)
+}
+
+.main-link {
+  color: var(--mainYellow);
+}
+
+.main-link:hover {
+  color: var(--mainBrown)
 }
 
 .btn-floating {
@@ -166,8 +178,14 @@ kontakt-background {
   list-style-type: none;
 }
 
-.services-icons > li {
-}
 a {
-  color: white;
+  color: var(--mainYellow);
+}
+
+a:hover {
+  color: var(--mainWhite);
+}
+
+.buybtn:hover {
+  color: var(--mainWhite);
 }
