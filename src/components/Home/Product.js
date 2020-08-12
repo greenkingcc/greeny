@@ -8,18 +8,11 @@ export default function Product({ product }) {
     <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
       <div className="card" style={{ minHeight: "50%" }}>
         <AniLink
-          cover
-          key={product.slug}
-          to={`/produkte/${product.slug}`}
+          swipe
+          top="entry"
           direction="left"
-          duration={0.9}
-          bg="url(http://images.ctfassets.net/i2jii7dx8u6a/72NBy2qymJfLWSBZeGeDVK/32e5eda90246b139f1673c3439542da2/couch15.png?w=1300&h=675&q=50)
-    center / cover   /* position / size */
-    no-repeat        /* repeat */
-    fixed            /* attachment */
-    padding-box      /* origin */
-    content-box      /* clip */
-    white            /* color */"
+          to={`/produkte/${product.slug}`}
+          entryOffset={8}
         >
           <Img fluid={product.image.fluid} className="card-img-top" />
         </AniLink>
@@ -29,10 +22,11 @@ export default function Product({ product }) {
           <div className="container-btn">
             <div className="btn-holder">
               <AniLink
-                fade
-                key={product.slug}
+                swipe
+                top="entry"
+                direction="left"
                 to={`/produkte/${product.slug}`}
-                duration={0.6}
+                entryOffset={18}
               >
                 <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize buybtn">
                   Details

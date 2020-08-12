@@ -103,7 +103,7 @@ kontakt-background {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
+  background: linear-gradient(rgba(201, 201, 201, 0.5), rgba(216, 213, 209, 0.5));
   background-position: center;
   background-size: cover;
 }
