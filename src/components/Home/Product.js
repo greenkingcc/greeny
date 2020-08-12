@@ -23,7 +23,6 @@ export default function Product({ product }) {
         >
           <Img fluid={product.image.fluid} className="card-img-top" />
         </AniLink>
-
         <div className="card-body text-center">
           <h6>{product.title}</h6>
           <h6 className="price">{product.price}€</h6>
