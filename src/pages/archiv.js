@@ -14,15 +14,14 @@ import Info from "../components/Home/Info";
 const ArchivPage = ({ data }) => (
   <Layout>
     <SEO title="Service" />
-    <BackgroundSection
+    {/* <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="Archiv"
       styleClass="service-background"
-    />
+    /> */}
     <Menu items={data.menu} />
 
     <section className="contact py-5">
-      <Title title="Unser Archiv" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <div className="col-10 col-sm-8 mx-auto text-center">

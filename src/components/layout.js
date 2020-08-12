@@ -5,26 +5,26 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 // import { useStaticQuery, graphql } from "gatsby"
 
-import "./bootstrap.min.css"
-import "./layout.css"
+import "./bootstrap.min.css";
+import "./layout.css";
 
-import Navbar from "./Globals/Navbar"
-import Footer from "./Globals/Footer"
+import Navbar from "./Globals/Navbar";
+import Footer from "./Globals/Footer";
 
 const Layout = ({ children }) => (
-  <>
+  <div className="main">
     <Navbar />
     {children}
     <Footer />
-  </>
-)
+  </div>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

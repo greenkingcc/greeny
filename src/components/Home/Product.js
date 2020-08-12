@@ -6,8 +6,24 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 export default function Product({ product }) {
   return (
     <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
-      <div className="card" style={{ minHeight: "100%" }}>
-        <Img fluid={product.image.fluid} className="card-img-top" />
+      <div className="card" style={{ minHeight: "50%" }}>
+        <AniLink
+          cover
+          key={product.slug}
+          to={`/produkte/${product.slug}`}
+          direction="left"
+          duration={0.9}
+          bg="url(https://{product.image.fluid.src/})
+    center / cover   /* position / size */
+    no-repeat        /* repeat */
+    fixed            /* attachment */
+    padding-box      /* origin */
+    content-box      /* clip */
+    white            /* color */"
+        >
+          <Img fluid={product.image.fluid} className="card-img-top" />
+        </AniLink>
+        {product.image.fluid.src}
         <div className="card-body text-center">
           <h6>{product.title}</h6>
           <h6 className="price">{product.price}€</h6>
@@ -20,7 +36,7 @@ export default function Product({ product }) {
                 duration={0.6}
               >
                 <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize buybtn">
-                  Kaufen
+                  Details
                 </button>
               </AniLink>
             </div>

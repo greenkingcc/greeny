@@ -12,7 +12,7 @@ export default class Navbar extends Component {
       {
         id: 1,
         path: "/",
-        text: "Showroom",
+        text: "Über uns",
       },
       {
         id: 2,
@@ -70,41 +70,46 @@ export default class Navbar extends Component {
             className="navbar-brand"
           >
             <img className="logo" src={Logo} alt="Logogattinator" />
+
             <h6 className="subtitle">Classic Interior</h6>
           </AniLink>
         </div>
-        <nav className="navbar navbar-expand-sm bg-light navbar-light">
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={this.navbarHandler}
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className={this.state.css}>
-            <ul className="navbar-nav mr-auto">
-              {this.state.links.map(link => {
-                return (
-                  <li key={link.id} className="nav-item ">
-                    <AniLink
-                      paintDrip
-                      to={link.path}
-                      duration={0.5}
-                      hex="#ff9e09"
-                      className="nav-link text-capitalize"
-                      activeStyle={{ fontWeight: "bold" }}
-                    >
-                      {link.text}
-                    </AniLink>
-                  </li>
-                );
-              })}
-              <li className="nav-item ml-sm-5">
-                {/* <IoIosMail className="mail-icon" /> */}
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <div className="nav-container">
+          <nav className="navbar navbar-expand-sm bg-light navbar-light">
+            <button
+              className="navbar-toggler"
+              type="button"
+              onClick={this.navbarHandler}
+            >
+              <span className="navbar-toggler-icon" />
+            </button>
+            <div className={this.state.css}>
+              <ul className="navbar-nav mr-auto containernav">
+                {this.state.links.map(link => {
+                  return (
+                    <div class="d-flex ">
+                      <li key={link.id} className="nav-item">
+                        <AniLink
+                          paintDrip
+                          to={link.path}
+                          duration={0.35}
+                          hex="#000"
+                          className="nav-link text-capitalize"
+                          activeStyle={{ fontWeight: "bold" }}
+                        >
+                          {link.text}
+                        </AniLink>
+                      </li>
+                    </div>
+                  );
+                })}
+                <li className="nav-item ml-sm-5">
+                  {/* <IoIosMail className="mail-icon" /> */}
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </>
     );
   }

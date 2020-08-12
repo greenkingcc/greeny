@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import { GoPackage } from "react-icons/go";
 import { FaPallet, FaTruckPickup } from "react-icons/fa";
 import { FiTruck } from "react-icons/fi";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import BackgroundSection from "../components/Globals/BackgroundSection";
 import Info from "../components/Home/Info";
@@ -13,18 +14,18 @@ import Title from "../components/Globals/Title";
 const KontaktPage = ({ data }) => (
   <Layout>
     <SEO title="Service" />
-    <BackgroundSection
+    {/* <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="Service & Kaufabwicklung"
       styleClass="service-background"
-    />
+    /> */}
 
     <section className="contact py-5">
-      <Title title="Transport&Versandmöglichkeiten" />
+      <Title title="Service" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead text-muted mb-5">
+            {/* <p className="lead text-muted mb-5">
               Sollten Sie auf unserer Seite ein Objekt der Begierde gefunden
               haben, freuen wir uns über eine Nachricht Ihrerseits.
             </p>
@@ -34,8 +35,8 @@ const KontaktPage = ({ data }) => (
               unterschiedlich sind, bitten wir um eine kurze Nachricht mit
               Zustelladresse Ihrerseits. Nutzen sie dazu gerne einfach unser
               Kontaktformular.
-            </p>
-            <ul className="services-icons">
+            </p> */}
+            {/* <ul className="services-icons">
               <li>
                 <GoPackage className="mail-icon" /> In der Regel versenden wir
                 mit DHL...
@@ -51,12 +52,17 @@ const KontaktPage = ({ data }) => (
               <li>
                 <FaTruckPickup className="mail-icon" /> Selbstabholung
               </li>
-            </ul>
-            <Link to="/produkte/">
-              <button className="btn btn-yellow btn-block text-capitalize mt-5">
-                Jetzt stöbern!
-              </button>
-            </Link>
+            </ul> */}
+            <p>textfeld</p>
+            beispielbilder
+            <AniLink
+              paintDrip
+              to="/produkte/"
+              duration={0.5}
+              hex="#ff9e09"
+              activeStyle={{ fontWeight: "bold" }}
+              className=""
+            ></AniLink>
           </div>
         </div>
       </div>

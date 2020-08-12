@@ -61,13 +61,13 @@ export default function Footer() {
                 <p>
                   <AniLink
                     paintDrip
-                    to="#!"
+                    to="/"
                     duration={0.5}
                     hex="#ff9e09"
                     activeStyle={{ fontWeight: "bold" }}
                     className="footer-link"
                   >
-                    Showroom
+                    Über uns
                   </AniLink>
                 </p>
               </li>

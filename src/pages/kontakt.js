@@ -10,14 +10,14 @@ import Title from "../components/Globals/Title";
 const KontaktPage = ({ data }) => (
   <Layout>
     <SEO title="Kontakt" />
-    <BackgroundSection
+    {/* <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="Mit uns Kontakt aufnehmen"
       styleClass="kontakt-background"
-    />
+    /> */}
 
     <section className="contact py-5">
-      <Title title="Jetzt kontaktieren" />
+      {/* <Title title=" " /> */}
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form
@@ -48,7 +48,7 @@ const KontaktPage = ({ data }) => (
             </div>
             {/* description */}
             <div className="form-group">
-              <label htmlFor="description"></label>
+              <label htmlFor="description">Beschreibung</label>
               <textarea
                 name="description"
                 id="description"
@@ -56,7 +56,17 @@ const KontaktPage = ({ data }) => (
                 rows="5"
                 placeholder="Ihre Anfrage"
               ></textarea>
-            </div>{" "}
+            </div>
+            <div className="form-group">
+              <label htmlFor="name">Telefon:</label>
+              <input
+                type="text"
+                className="form-control"
+                name="telefon"
+                id="telefon"
+                placeholder="Ihre Telefonnummer"
+              />
+            </div>
             <button
               type="submit"
               className="btn btn-yellow btn-block text-capitalize mt-5"

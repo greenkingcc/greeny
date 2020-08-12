@@ -6,6 +6,17 @@
   --mainDark: #222;
 }
 
+.main {
+  /* max-width: 1600px; */
+  margin: 0 auto;
+  padding: 0 0em 0em;
+}
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
@@ -24,8 +35,12 @@ h6 {
 
 .subtitle {
   padding-left: 1em;
-  color: var(--mainBrown);
-  display: inline;
+  color: var(--mainWhite);
+  display: flex;
+  letter-spacing: .67rem !important;
+  padding-left: 1.4rem;
+  padding-top: 0;
+  margin-top: -1.8rem;
 }
 
 .price {
@@ -59,8 +74,8 @@ kontakt-background {
 
 .btn-yellow,
 .btn-yellow-white-bg {
-  color: var(--mainYellow);
-  border-color: var(--mainYellow);
+  color: var(--mainDark);
+  border-color: var(--mainDark);
   background: var(--mainGrey);
   padding: 10px 25px;
 }
@@ -70,7 +85,7 @@ kontakt-background {
 }
 
 .btn-yellow:hover {
-  background: var(--mainYellow);
+  background: var(--mainDark);
   color: var(--mainBrown);
 }
 
@@ -80,7 +95,7 @@ kontakt-background {
 
 .menu,
 .contact {
-  background: var(--mainGrey);
+  background: var(--mainWhite);
 }
 
 .product-title {
@@ -95,7 +110,8 @@ kontakt-background {
 
 .logo {
   padding: 1em;
-  height: 70px;
+  height: 100px;
+  width: auto;
 }
 
 .container-btn {
@@ -115,13 +131,52 @@ kontakt-background {
   /* background: blue; */
 }
 
+/* NAVBAR start */
+/* lOGO */
+.navbar-header {
+  float: none;
+  width: 100%;
+  height: calc(100%-60px);
+
+  background-color: #000000;
+
+}
+
 .navbar-nav li a:hover,
 .navbar-nav>.active a {
   color: #fff !important;
-  background-color: var(--mainYellow) !important;
+  background-color: var(--mainDark) !important;
   background-image: none !important;
+  justify-content: space-evenly;
 }
 
+.navbar-nav ul {
+  border: 1px solid rgb(212, 20, 20);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-container {
+  border: 1px solid var(--mainDark);
+
+}
+
+.containernav {
+  display: flex;
+  width: 100%;
+  /* background-color: #white; */
+}
+
+.d-flex {
+  flex-basis: 50%;
+  justify-content: flex-start;
+
+}
+
+
+/* NAVBAR END */
 .descriptiontxt {
   max-width: 600px;
   margin: 0 auto 20px;
@@ -145,7 +200,7 @@ kontakt-background {
 }
 
 .main-link:hover {
-  color: var(--mainBrown)
+  color: var(--mainGrey)
 }
 
 .btn-floating {
@@ -153,26 +208,7 @@ kontakt-background {
   margin: 0 0.6rem;
 }
 
-.navbar-header {
-  float: none;
-  width: 100%;
-  height: calc(100%-60px);
-}
 
-.nav-item {
-  /* width: calc(100% - 60px); */
-
-  margin-right: 10rem;
-}
-
-@media (min-width: 768px) {
-  .navbar-nav {
-    margin: 0 0rem;
-    /* display: table; */
-    /* table-layout: fixed; */
-    float: none;
-  }
-}
 
 .services-icons {
   list-style-type: none;
@@ -180,6 +216,13 @@ kontakt-background {
 
 a {
   color: var(--mainYellow);
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  /* padding: ; */
+
 }
 
 a:hover {
@@ -188,4 +231,8 @@ a:hover {
 
 .buybtn:hover {
   color: var(--mainWhite);
+}
+
+.lbrown-btn {
+  color: var(--mainYellow);
 }

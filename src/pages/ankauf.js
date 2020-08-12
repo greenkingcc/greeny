@@ -13,14 +13,14 @@ import Title from "../components/Globals/Title";
 const AnkaufPage = ({ data }) => (
   <Layout>
     <SEO title="Service" />
-    <BackgroundSection
+    {/* <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="Ankauf Ihrer Objekte"
       styleClass="service-background"
-    />
+    /> */}
 
     <section className="contact py-5">
-      <Title title="Sie wollen Ihr Objekt verkaufen?" />
+      <Title title="" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <div className="col-10 col-sm-8 mx-auto text-center">
@@ -32,11 +32,11 @@ const AnkaufPage = ({ data }) => (
               Nutzen sie dazu gerne einfach unser Kontaktformular.
             </p>
 
-            <Link to="/kontakt/">
+            {/* <Link to="/kontakt/">
               <button className="btn text-uppercase btn-yellow btn-yellow-white-bg">
                 Kontakt aufnehmen!
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

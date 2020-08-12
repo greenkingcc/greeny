@@ -15,10 +15,11 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     {/* RANDOM PRODUKTE  */}
-    <Products />
+    {/* <Products /> */}
     {/* TITLE BAR */}
-    <Title title="Über Uns" />
     <section className="py-5">
+      {" "}
+      <Title title="" />
       <div className="container">
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
@@ -39,9 +40,9 @@ const IndexPage = ({ data }) => (
               nach Zeit und Aufwand können wir Ihnen auch per Ratschlag zur
               Seite stehen um Ihr Objekt zu restaurieren.
             </p>
-            <Link to="/produkte/">
+            <Link to="/produkte">
               <button className="btn text-uppercase btn-yellow btn-yellow-white-bg">
-                Jetzt stöbern!
+                Objekte
               </button>
             </Link>
           </div>
@@ -75,8 +76,8 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     />
     {/* <Info /> */}
-    <Menu items={data.menu} />
-    <Contact />
+    {/* <Menu items={data.menu} /> */}
+    {/* <Contact /> */}
   </Layout>
 );
 

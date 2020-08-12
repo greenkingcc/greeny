@@ -80,13 +80,14 @@ const BagTemplate = ({ data: { item } }) => {
               <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize ">
                 Kaufen
               </button>
-            </a>{" "}
+            </a>
             <h6 className="text-muted mt-3">(per Mail kaufen)</h6>
           </div>
         </main>
-      </div>{" "}
+      </div>
+      {/* KONTAKT FORMULAR */}
       <section className="contact py-5">
-        <Title title="Ihre Kaufanfrage" />
+        <Title title="" />
         <div className="row">
           <div className="col-10 col-sm-8 col-md-6 mx-auto">
             <form
@@ -118,22 +119,32 @@ const BagTemplate = ({ data: { item } }) => {
               {/* description */}
               <div className="form-group">
                 <label htmlFor="description">
-                  Beschreiben Sie Ihre Kaufanfrage:
+                  Beschreiben Sie Ihre Kaufanfrage:{" "}
+                  <h6 className="text-muted mt-3">(Preis ist verhandelbar)</h6>
                 </label>
                 <textarea
                   name="description"
                   id="description"
                   className="form-control"
-                  rows="5"
-                  placeholder={
-                    `Ich würde gerne ` +
+                  rows="11"
+                >
+                  {`Hallo Gattinator,
+
+Ich habe Interesse an ` +
                     item.title +
-                    ` zu einem Preis von ` +
+                    ` für ` +
                     item.price +
-                    ` € kaufen. `
-                  }
-                ></textarea>
-              </div>{" "}
+                    ` €.
+                    
+Ich bitte darum an folgende Adresse zu liefern und mir die Liefergebühren mitzuteilen:
+Max Mustermann
+Musterstraße: 47
+44333 Recklinghofen
+
+Liebe Grüße,
+Max Mustermann`}
+                </textarea>
+              </div>
               <button
                 type="submit"
                 className="btn btn-yellow btn-block text-capitalize mt-5"

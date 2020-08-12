@@ -43,11 +43,11 @@ export default class Menu extends Component {
       return (
         <section className="menu py-5">
           <div className="container">
-            <Title title="Archiv" />
+            <Title title="" />
             <div className="row">
-              <h1>Unser Archiv:</h1>
+              {/* <h1>Unser Archiv:</h1> */}
               {/* categories */}
-              <div className="row mb-5">
+              {/* <div className="row mb-5">
                 <div className="col-10 mx-auto text-center">
                   {this.state.categories.map((category, index) => {
                     return (
@@ -64,7 +64,7 @@ export default class Menu extends Component {
                     );
                   })}
                 </div>
-              </div>
+              </div> */}
               {/* items */}
               <div className="row ">
                 {this.state.furnitureItems.map(({ node }) => {
