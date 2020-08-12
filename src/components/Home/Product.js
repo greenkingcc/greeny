@@ -13,7 +13,7 @@ export default function Product({ product }) {
           to={`/produkte/${product.slug}`}
           direction="left"
           duration={0.9}
-          bg="url(https://{product.image.fluid.src/})
+          bg="url(http://images.ctfassets.net/i2jii7dx8u6a/72NBy2qymJfLWSBZeGeDVK/32e5eda90246b139f1673c3439542da2/couch15.png?w=1300&h=675&q=50)
     center / cover   /* position / size */
     no-repeat        /* repeat */
     fixed            /* attachment */
@@ -23,7 +23,7 @@ export default function Product({ product }) {
         >
           <Img fluid={product.image.fluid} className="card-img-top" />
         </AniLink>
-        {product.image.fluid.src}
+        {/* {product.image.fluid.src} */}
         <div className="card-body text-center">
           <h6>{product.title}</h6>
           <h6 className="price">{product.price}€</h6>
