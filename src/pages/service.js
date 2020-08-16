@@ -53,7 +53,7 @@ const KontaktPage = ({ data }) => (
                 <FaTruckPickup className="mail-icon" /> Selbstabholung
               </li>
             </ul> */}
-            <p>Wir bieten restaurationen an</p>
+            <p>Wir bieten Restaurationen an</p>
             Hier ein Vorher-/Nachher Vergleich
             {/* <AniLink
               paintDrip
