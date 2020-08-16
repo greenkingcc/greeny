@@ -12,12 +12,12 @@ export default class Navbar extends Component {
       {
         id: 1,
         path: "/",
-        text: "Über uns",
+        text: "Objekte",
       },
       {
         id: 2,
-        path: "/produkte",
-        text: "Objekte",
+        path: "/ueberuns",
+        text: "Über uns",
       },
       {
         id: 3,
@@ -55,7 +55,7 @@ export default class Navbar extends Component {
         <div className="navbar-header">
           <AniLink
             cover
-            to="/produkte"
+            to="/"
             direction="left"
             duration={3}
             bg="

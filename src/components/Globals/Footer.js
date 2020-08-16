@@ -94,7 +94,7 @@ export default function Footer() {
         Copyright &copy; {new Date().getFullYear().toString()} by{" "}
         <AniLink
           paintDrip
-          to={`/produkte`}
+          to={`/`}
           duration={0.5}
           hex="#ff9e09"
           activeStyle={{ fontWeight: "bold" }}
