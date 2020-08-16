@@ -53,19 +53,30 @@ const KontaktPage = ({ data }) => (
                 <FaTruckPickup className="mail-icon" /> Selbstabholung
               </li>
             </ul> */}
-            <p>textfeld</p>
-            beispielbilder
-            <AniLink
+            <p>Wir bieten restaurationen an</p>
+            Hier ein Vorher-/Nachher Vergleich
+            {/* <AniLink
               paintDrip
               to="/produkte/"
               duration={0.5}
               hex="#ff9e09"
               activeStyle={{ fontWeight: "bold" }}
               className=""
-            ></AniLink>
+            ></AniLink> */}
           </div>
         </div>
       </div>
+      <br />
+      <BackgroundSection
+        img={data.img.childImageSharp.fluid}
+        title=""
+        styleClass="default-background"
+      />
+      <BackgroundSection
+        img={data.img.childImageSharp.fluid}
+        title=""
+        styleClass="default-background"
+      />
     </section>
 
     {/* <Info /> */}
@@ -74,7 +85,7 @@ const KontaktPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "kontakt-background.jpeg" }) {
+    img: file(relativePath: { eq: "default-background.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

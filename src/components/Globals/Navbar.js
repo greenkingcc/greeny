@@ -55,7 +55,7 @@ export default class Navbar extends Component {
         <div className="navbar-header">
           <AniLink
             cover
-            to="/"
+            to="/produkte"
             direction="left"
             duration={3}
             bg="

@@ -9,68 +9,8 @@ export default function Footer() {
       <div className="container text-center text-md-left">
         <div className="row">
           <div className="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-            <h5 className="font-weight-bold text-uppercase mb-4">
-              Gattinator - Classic Interior
-            </h5>
-            <p>
-              Suchen Sie ein ganz bestimmtes Objekt? Dann könnten wir auf auf
-              <AniLink
-                paintDrip
-                to={`/`}
-                duration={0.5}
-                hex="#ff9e09"
-                activeStyle={{ fontWeight: "bold" }}
-                className="footer-link"
-              >
-                <span> Gattinator.de </span>
-              </AniLink>
-              mit Sicherheit hilfreich für Sie sein.
-            </p>
-            <p>
-              Schreiben Sie uns per{" "}
-              <a
-                href={
-                  `mailto:info@gattinator.de?subject=Kaufanfrage/Verkaufsangebot:` +
-                  +`&body=Hallo%20Gattinator,%0D%0D...`
-                }
-              >
-                Mail{" "}
-              </a>
-              oder
-              <AniLink
-                paintDrip
-                to={`/kontakt`}
-                duration={0.5}
-                hex="#ff9e09"
-                activeStyle={{ fontWeight: "bold" }}
-                className="footer-link"
-              >
-                <span> Kontaktformular </span>
-              </AniLink>
-              eine Nachricht - gerne mit Vergleichsangebot - sofern vorhanden.
-            </p>
-          </div>
-
-          <hr className="clearfix w-100 d-md-none"></hr>
-
-          <div className="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-            <h5 className="font-weight-bold text-uppercase mb-4">About</h5>
-
+            <h5 className="font-weight-bold text-uppercase mb-4">Impressum</h5>
             <ul className="list-unstyled">
-              <li>
-                <p>
-                  <AniLink
-                    paintDrip
-                    to="/"
-                    duration={0.5}
-                    hex="#ff9e09"
-                    activeStyle={{ fontWeight: "bold" }}
-                    className="footer-link"
-                  >
-                    Über uns
-                  </AniLink>
-                </p>
-              </li>
               <li>
                 <p>
                   <AniLink
@@ -81,7 +21,7 @@ export default function Footer() {
                     activeStyle={{ fontWeight: "bold" }}
                     className="footer-link"
                   >
-                    Über Uns
+                    Impressum{" "}
                   </AniLink>
                 </p>
               </li>
@@ -117,6 +57,8 @@ export default function Footer() {
           </div>
 
           <hr className="clearfix w-100 d-md-none"></hr>
+
+          <hr className="clearfix w-100 d-md-none"></hr>
           <div className="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
             <h5 className="font-weight-bold text-uppercase mb-4">Address</h5>
 
@@ -145,31 +87,6 @@ export default function Footer() {
           </div>
 
           <hr className="clearfix w-100 d-md-none"></hr>
-          <div className="col-md-2 col-lg-2 text-center mx-auto my-4">
-            <h5 className="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-            <a type="button" className="btn-floating btn-fb">
-              <i className="fab fa-facebook-f">
-                <FaFacebook />
-              </i>
-            </a>
-
-            <a type="button" className="btn-floating btn-tw">
-              <i className="fab fa-twitter">
-                <FaTwitter />
-              </i>
-            </a>
-
-            <a type="button" className="btn-floating btn-gplus">
-              <i className="fab fa-google-plus-g">
-                <FaGooglePlus />
-              </i>
-            </a>
-
-            <a type="button" className="btn-floating btn-dribbble">
-              <i className="fab fa-dribbble"></i>
-            </a>
-          </div>
         </div>
       </div>
 
@@ -177,15 +94,15 @@ export default function Footer() {
         Copyright &copy; {new Date().getFullYear().toString()} by{" "}
         <AniLink
           paintDrip
-          to={`/`}
+          to={`/produkte`}
           duration={0.5}
           hex="#ff9e09"
           activeStyle={{ fontWeight: "bold" }}
           onclick="topFunction()"
         >
-          Gattinator
+          Gattinator.de
         </AniLink>
-        . All rights reserved.
+        All rights reserved.
       </div>
     </footer>
   );

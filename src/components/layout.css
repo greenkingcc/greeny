@@ -86,7 +86,7 @@ kontakt-background {
 
 .btn-yellow:hover {
   background: var(--mainDark);
-  color: var(--mainBrown);
+  color: var(--mainWhite);
 }
 
 .footer {
@@ -178,13 +178,20 @@ kontakt-background {
 
 /* NAVBAR END */
 .descriptiontxt {
-  max-width: 600px;
+  max-width: 450px;
+  min-width: 200px;
   margin: 0 auto 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 .panel-footer.panel-custom {
   background: var(--mainBrown);
-  color: var(--mainYellow);
+  color: var(--mainWhite);
+  background-color: #000000;
+
 }
 
 .footer-link {

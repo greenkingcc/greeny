@@ -82,11 +82,11 @@ export default class Menu extends Component {
                           <h6 className="mb-0">
                             <small>{node.title}</small>
                           </h6>
-                          <h6 className="mb-0 text-yellow">
+                          {/* <h6 className="mb-0 text-yellow">
                             <small>{node.price}€</small>
-                          </h6>
+                          </h6> */}
                         </div>
-                        <p className="text-muted">
+                        <p className="text-muted descriptiontxt">
                           <small>{node.description.description}</small>
                         </p>
                       </div>

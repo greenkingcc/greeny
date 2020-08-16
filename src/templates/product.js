@@ -66,21 +66,22 @@ const BagTemplate = ({ data: { item } }) => {
           <div className="descriptiontxt">
             {documentToReactComponents(item.description.json, options)}
             <h6 className="price">{item.price}€</h6>
-            <a
-              href={
-                `mailto:info@gattinator.de?subject=Interesse%20an:` +
-                item.title +
-                `&body=Hallo%20Gattinator,%0D%0DIch%20interessiere%20mich%20fuer:%0Dhttps://gattinator-shop.netlify.app/produkte/` +
-                item.slug +
-                `%0Dzu%20einem%20Preis%20von%20` +
-                item.price +
-                `%20Euro`
-              }
-            >
-              <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize ">
+            <button className="btn btn-yellow btn-yellow-white-bg mt-3 text-capitalize ">
+              <a
+                href={
+                  `mailto:info@gattinator.de?subject=Interesse%20an:` +
+                  item.title +
+                  `&body=Hallo%20Gattinator,%0D%0DIch%20interessiere%20mich%20fuer:%0Dhttps://gattinator-shop.netlify.app/produkte/` +
+                  item.slug +
+                  `%0Dzu%20einem%20Preis%20von%20` +
+                  item.price +
+                  `%20Euro`
+                }
+              >
                 Kaufen
-              </button>
-            </a>
+              </a>
+            </button>
+
             <h6 className="text-muted mt-3">(per Mail kaufen)</h6>
           </div>
         </main>
@@ -150,7 +151,7 @@ Max Mustermann`}
                 className="btn btn-yellow btn-block text-capitalize mt-5"
               >
                 Abschicken
-              </button>{" "}
+              </button>
               <h6 className="text-muted mt-3">
                 (per Online-Kontaktformular kaufen)
               </h6>
