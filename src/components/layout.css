@@ -194,6 +194,11 @@ kontakt-background {
 
 }
 
+.ueber-uns-text {
+  letter-spacing: 0.1em;
+  line-height: 170%;
+}
+
 .footer-link {
   color: var(--mainWhite);
 }

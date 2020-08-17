@@ -23,7 +23,7 @@ const UeuberunsPage = ({ data }) => (
       <div className="container">
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead text-muted mb-5">
+            <p className="lead text-muted mb-5  ueber-uns-text">
               Suchen Sie ein ganz bestimmtes Objekt? Dann könnten unsere
               Kunstobjekte auf
               <AniLink paintDrip to="/produkte" className="main-link">
