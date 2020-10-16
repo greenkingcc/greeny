@@ -3,9 +3,9 @@ require("dotenv").config({
 });
 module.exports = {
   siteMetadata: {
-    title: `Gattinator Interior Design Shop`,
-    description: `Bei uns finden Sie Möbel vom Designer.`,
-    author: `@gatsbyjs`,
+    title: `Greenking Shop`,
+    description: `Bei uns finden Sie hochwertiges CBD von Greenking.`,
+    author: `@JLK`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

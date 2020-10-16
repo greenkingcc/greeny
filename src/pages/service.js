@@ -53,8 +53,10 @@ const KontaktPage = ({ data }) => (
                 <FaTruckPickup className="mail-icon" /> Selbstabholung
               </li>
             </ul> */}
+            <hr />
             <p>Wir bieten Restaurationen an</p>
             Hier ein Vorher-/Nachher Vergleich
+            <hr />
             {/* <AniLink
               paintDrip
               to="/produkte/"
@@ -70,12 +72,12 @@ const KontaktPage = ({ data }) => (
       <BackgroundSection
         img={data.img.childImageSharp.fluid}
         title=""
-        styleClass="default-background"
+        styleClass="service-compare"
       />
       <BackgroundSection
         img={data.img.childImageSharp.fluid}
         title=""
-        styleClass="default-background"
+        styleClass="service-compare"
       />
     </section>
 

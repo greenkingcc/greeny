@@ -68,6 +68,19 @@ kontakt-background {
   background-size: cover;
 }
 
+.service-compare {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
+  background-position: center;
+  background-size: cover;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
 .kontakt-background {
   min-height: 50vh;
 }
@@ -178,7 +191,7 @@ kontakt-background {
 
 /* NAVBAR END */
 .descriptiontxt {
-  max-width: 450px;
+  max-width: 350px;
   min-width: 200px;
   margin: 0 auto 20px;
   white-space: nowrap;
