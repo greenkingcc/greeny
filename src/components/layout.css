@@ -1,6 +1,6 @@
 :root {
   --mainBrown: #2d1e1f;
-  --mainYellow: rgb(255, 158, 9);
+  --mainYellow: rgb(73, 255, 1);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -32,15 +32,23 @@ h6 {
   font-family: "Courier New", Courier, monospace !important;
   letter-spacing: 0.25rem !important;
 }
-
+.title{
+ padding-left: 1em;
+ color: var(--mainWhite);
+ display: flex;
+ letter-spacing: .67rem !important;
+ padding-left: 1.4rem;
+ padding-top: 0;
+ margin-top: -1.rem;
+}
 .subtitle {
   padding-left: 1em;
   color: var(--mainWhite);
   display: flex;
   letter-spacing: .67rem !important;
-  padding-left: 1.4rem;
+  padding-left: 1.5rem;
   padding-top: 0;
-  margin-top: -1.8rem;
+  margin-top: -1.1rem;
 }
 
 .price {
@@ -149,7 +157,7 @@ kontakt-background {
 .navbar-header {
   float: none;
   width: 100%;
-  height: calc(100%-60px);
+  height: calc(100%-40px);
 
   background-color: #000000;
 

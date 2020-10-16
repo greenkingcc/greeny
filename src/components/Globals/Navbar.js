@@ -69,9 +69,9 @@ export default class Navbar extends Component {
   "
             className="navbar-brand"
           >
-            <img className="logo" src={Logo} alt="Logogattinator" />
-
-            <h6 className="subtitle">Classic Interior</h6>
+            {/* <img className="logo" src={Logo} alt="Logogattinator" /> */}
+<h1 className="title">Greenking</h1>
+            <h6 className="subtitle">CBD Shop</h6>
           </AniLink>
         </div>
         <div className="nav-container">

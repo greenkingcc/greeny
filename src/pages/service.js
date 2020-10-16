@@ -54,8 +54,8 @@ const KontaktPage = ({ data }) => (
               </li>
             </ul> */}
             <hr />
-            <p>Wir bieten Restaurationen an</p>
-            Hier ein Vorher-/Nachher Vergleich
+            <p>Wir bieten qualitatives CBD zum guten Preis an</p>
+
             <hr />
             {/* <AniLink
               paintDrip

@@ -24,19 +24,14 @@ const UeuberunsPage = ({ data }) => (
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5  ueber-uns-text">
-              Suchen Sie ein ganz bestimmtes Objekt? Dann könnten unsere
-              Kunstobjekte auf
+              Suchen Sie CBD? Dann könnten unser Onlineshop auf
               <AniLink paintDrip to="/produkte" className="main-link">
                 {" "}
-                Gattinator.de{" "}
+                greenking-shop.de{" "}
               </AniLink>
               mit Sicherheit hilfreich für Sie sein. Schreiben Sie uns doch
-              unverbindlich eine Nachricht, gerne mit
-              Vergleichsbildern/Vergleichsangebot, sofern vorhanden.
-              <br /> Wir nehmen Sie bzw. Ihr Wunschobjekt auf unsere Liste und
-              würden Sie bei einem Fund unsererseits umgehend kontaktieren. Auch
-              für Restaurationen Ihres Objektes können Sie uns gerne
-              kontaktieren. Nutzen Sie dazu einfach unser Kontaktformular. Je
+              unverbindlich eine Nachricht, über Whatsapp.
+              Nutzen Sie dazu einfach unser Kontaktformular. Je
               nach Zeit und Aufwand können wir Ihnen auch per Ratschlag zur
               Seite stehen um Ihr Objekt zu restaurieren.
             </p>
